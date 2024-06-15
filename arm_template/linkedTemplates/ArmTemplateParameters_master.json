@@ -1,0 +1,52 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "factoryName": {
+            "value": "retaildata-adf1"
+        },
+        "ls_datalake_adls_accountKey": {
+            "value": ""
+        },
+        "ls_blobsa_connectionString": {
+            "value": ""
+        },
+        "ls_sql_db_password": {
+            "value": ""
+        },
+        "ls_kv_retaildata_kv_properties_typeProperties_baseUrl": {
+            "value": "https://retaildata-kv.vault.azure.net/"
+        },
+        "ls_amazoms3_retaildata_properties_typeProperties_accessKeyId": {
+            "value": {
+                "type": "AzureKeyVaultSecret",
+                "store": {
+                    "referenceName": "ls_kv_retaildata_kv",
+                    "type": "LinkedServiceReference"
+                },
+                "secretName": "s3accesskeyid"
+            }
+        },
+        "ls_datalake_adls_properties_typeProperties_url": {
+            "value": "https://retaildatadatalakesa.dfs.core.windows.net/"
+        },
+        "ls_sql_db_properties_typeProperties_server": {
+            "value": "retailsqlserver1.database.windows.net"
+        },
+        "ls_sql_db_properties_typeProperties_database": {
+            "value": "retailsqldb"
+        },
+        "ls_sql_db_properties_typeProperties_userName": {
+            "value": "retaildb"
+        },
+        "tr_ingest_process_orders_properties_typeProperties_scope": {
+            "value": "/subscriptions/c9939a34-52b0-4a0a-9cb5-6a03f1daff58/resourceGroups/retaildata-rg/providers/Microsoft.Storage/storageAccounts/retaildatablobsa"
+        },
+        "containerUri": {
+            "value": ""
+        },
+        "containerSasToken": {
+            "value": ""
+        }
+    }
+}
