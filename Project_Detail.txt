@@ -52,6 +52,3 @@ PRIMARY KEY (order_id)
 
 9. Create a trigger(storage event trigger) and attach it to the execute pipeline.
 
-
-6. Access Key ID= AKIA6ODU37YUACJQS365
-   Secret Access Key= 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
